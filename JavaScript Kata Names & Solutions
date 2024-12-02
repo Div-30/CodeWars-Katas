@@ -1,0 +1,67 @@
+Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+function countDevelopers(list) {
+  // your awesome code here :)
+  let devEur = 0;
+  for (let i = 0; i < list.length; i++) {
+      if (list[i].hasOwnProperty('continent')) {
+          if(list[i].continent === 'Europe' && list[i].language === 'JavaScript') {
+              devEur += 1;
+          }
+      } else {
+          devEur += 0;
+      }
+  }
+  return devEur;
+  
+}
+
+
+Is there a vowel in there?
+
+function isVow(a) {
+  let b = [];
+  for(let i = 0; i < a.length; i++) {
+    if(String.fromCharCode(a[i]) === 'a' || String.fromCharCode(a[i]) === 'i' || String.fromCharCode(a[i]) === 'o' || String.fromCharCode(a[i]) === "u" || String.fromCharCode(a[i]) === "e") {
+      b.push(String.fromCharCode(a[i]));
+    } else {
+      b.push(a[i]);
+    }
+    
+  };
+  return b;
+}
+
+
+Sum Of Cubes
+
+function sumCubes(n){
+  // ...
+  
+  let answ = 0;
+  for(let nber = 1;nber <= n; nber++) {
+    answ += Math.pow(nber, 3);
+  }
+  return answ;
+}
+
+
+Find the Capital 
+
+var capitals = function (word) {
+	// Write your code here
+  let word1 = word.split('');
+  let word2 = [];
+  for (let i = 0; i < word1.length; i++) {
+    if (word1[i] === word1[i].toUpperCase()) {
+        word2.push(i);
+    }
+  }
+  
+  return word2;
+  
+};
+
+
+
+
