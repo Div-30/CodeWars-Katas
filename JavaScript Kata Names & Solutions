@@ -1,3 +1,49 @@
+Balanced Number (Special Numbers Series #1 )
+
+function balancedNum(number) {
+ let nber1 = number.toString();
+  let nber2 = nber1.split('').map(Number);
+  let length = nber2.length;
+  let sum1 = 0;
+  let sum2 = 0;
+   if (length <= 2) return 'Balanced';
+  let middleStart,middleEnd;
+  if (length % 2 === 0){
+       middleStart = length / 2 - 1;
+       middleEnd = length / 2;
+  } else {
+      middleStart = Math.floor(length / 2);
+      middleEnd = Math.floor(length / 2);
+  }
+  
+  for (let i = 0; i < middleStart; i++) {
+    sum1 += nber2[i];
+  }
+  for (let j = middleEnd + 1; j < length; j++) {
+    sum2 += nber2[j];
+  }
+  // Compare and return result
+  return sum1 === sum2 ? "Balanced" : "Not Balanced";
+}
+
+
+Array.diff
+function arrayDiff(a, b) {
+  
+  return a.filter(x => !b.includes(x));
+  
+}
+
+
+Flatten
+
+var flatten = function (array){
+  // TODO: Program me
+  let arr1 = array.flat(1);
+  return arr1;
+}
+
+
 Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
 
 function countDevelopers(list) {
@@ -61,6 +107,25 @@ var capitals = function (word) {
   return word2;
   
 };
+
+
+The highest profit wins!
+
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]; // fix me!
+}
+
+
+Keep Hydrated!
+
+function litres(time) {
+  let litres = 0.5;
+  let litreperTime = litres * time;
+  
+  return Math.floor(litreperTime);
+}
+
+console.log(litres(5));
 
 
 
