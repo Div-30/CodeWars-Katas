@@ -1,3 +1,72 @@
+Break camelCase
+
+function solution(string) {
+  return string.replace(/([A-Z])/g, " $1");
+}
+
+
+Sum of Odd Cubed Numbers
+
+function cubeOdd(arr) {
+
+// insert code here >.<
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof(arr[i]) !== "number") {
+      return undefined;
+    } else if (arr[i] % 2 !== 0) {
+      sum += Math.pow(arr[i], 3);
+    }
+  
+  }
+
+
+return sum;
+}
+
+
+How many consecutive numbers are needed?
+
+function consecutive(array) {
+//code me
+  let arr1 = [];
+  let arr2 = array.sort((a,b) => a-b);
+  let nber1 = arr2[0];
+  let nber2 = arr2[arr2.length - 1];
+  let count=0;
+  for(let i = nber1; i <= nber2; i++) {
+      if(!arr2.includes(i)){
+          arr1.push(i)
+          count++;
+      }
+      
+  }
+  return count;
+}
+
+
+Reverse words
+
+function reverseWords(str) {
+  // Go for it
+  let str1 = str.split(' ');
+  let str2 = str1.map((element) => element.split('').reverse().join(''));
+  let str3 = str2.join(' ');
+  return str3;
+}
+
+
+
+Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+
+function greetDevelopers(list) {
+  // thank you for checking out my kata :)
+  list.map((element => element.greeting = "Hi " + element.firstName + ", what do you like the most about " + element.language + "?"));
+  return list;
+}
+
+
+
 Balanced Number (Special Numbers Series #1 )
 
 function balancedNum(number) {
