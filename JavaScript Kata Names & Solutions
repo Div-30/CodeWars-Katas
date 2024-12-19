@@ -1,3 +1,26 @@
+Currying functions: multiply all elements in an array
+
+function solution(str, ending){
+ 
+  return str.endsWith(ending);
+}
+
+Currying functions: multiply all elements in an array
+
+function multiplyAll(arr) {
+  function multiply(nber) {
+    let arr2 = arr.map((element) => element * nber );
+    return arr2;
+  }
+  
+  return multiply;
+  
+}
+
+
+
+
+
 Break camelCase
 
 function solution(string) {
