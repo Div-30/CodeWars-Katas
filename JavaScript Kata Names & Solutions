@@ -220,5 +220,70 @@ function litres(time) {
 console.log(litres(5));
 
 
+Sum Mixed Array
+function sumMix(x){
+  let arr = x.reduce((acc,curr) => acc + Number(curr), 0);
+  return arr;
+
+}
+
+
+Odd or Even?
+function oddOrEven(array) {
+    let sum = array.reduce((acc,curr) => acc + curr, 0);
+    if (sum % 2 === 0) {
+      return "even";
+  } else {
+      return "odd";
+  }
+    
+}
+
+
+Find the smallest integer in the array
+function findSmallestInt(arr) {
+  //your code here
+  let arr1 = arr.sort((a,b) => a-b);
+  return arr1[0];
+}
+
+
+Ones and Zeros
+const binaryArrayToNumber = arr => {
+  return arr.reduce((acc, bit, index) => {
+    const power = arr.length - 1 - index;
+    return acc + bit * Math.pow(2, power);
+  }, 0);
+};
+
+
+Disemvowel Trolls
+function disemvowel(str) {
+  // Regular expression to match vowels (case-insensitive)
+  const vowels = /[aeiouAEIOU]/g;
+  // Replace all vowels with an empty string
+  return str.replace(vowels, "");
+}
+
+
+Vowel Count
+function getCount(str) {
+  const vowelsCount = str.match(/[aeiou]/gi)?.length || 0;
+  return vowelsCount;
+}
+
+
+Gravity Flip
+const flip=(d, a)=>{
+  //TODO
+  if (d === "R") {
+    a.sort((a,b) => a-b);
+  } else {
+    a.sort((a,b) => b-a);
+  }
+  return a; 
+}
+
+
 
 
