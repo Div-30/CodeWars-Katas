@@ -1,3 +1,39 @@
+Sum Strings as Numbers
+
+function sumStrings(a,b) { 
+  let nber1 = BigInt(a);
+  let nber2 = BigInt(b);
+  
+  return (nber1 + nber2).toString();
+
+}
+
+Counting Duplicates
+
+function duplicateCount(text){
+  //...
+  let count = 0;
+  let textArr = text.toLowerCase().split('');
+  let charCount = {};
+  textArr.forEach((char) => {
+    charCount[char] = charCount[char] + 1 || 1;
+  });
+  for (let char in charCount) {
+    if (charCount[char] > 1) {
+      count++;
+    }
+  }
+  return count;
+}
+
+Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+
+function findSenior(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  
+  return list.filter((dev) => dev.age === Math.max(...list.map((dev) => dev.age)));
+}
+
 Currying functions: multiply all elements in an array
 
 function solution(str, ending){
