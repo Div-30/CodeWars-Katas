@@ -1,7 +1,9 @@
 
 
-
-
+Returning Strings
+function greet(name) {
+  return `Hello, ${name} how are you doing today?`;
+}
 
 Sentence Smash
 function smash(words) {
