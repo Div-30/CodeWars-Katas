@@ -1,3 +1,25 @@
+
+
+Duplicate Encoder
+
+function duplicateEncode(word) {
+    // Convert word to lowercase to handle case-insensitive comparison
+    word = word.toLowerCase();
+    
+    // Create an object to count occurrences of each character
+    let counts = {};
+    
+    // Count occurrences of each character
+    for (let char of word) {
+        counts[char] = (counts[char] || 0) + 1;
+    }
+    
+    // Map each character to '(' if it appears once, or ')' if it appears multiple times
+    return word.split('').map(char => 
+        counts[char] === 1 ? '(' : ')'
+    ).join('');
+}
+
 Sum Strings as Numbers
 
 function sumStrings(a,b) { 
