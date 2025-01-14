@@ -1,5 +1,13 @@
 
 
+
+
+
+Sentence Smash
+function smash(words) {
+  return words.join(' ');
+}
+
 Duplicate Encoder
 
 function duplicateEncode(word) {
