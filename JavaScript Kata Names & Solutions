@@ -1,5 +1,17 @@
 
 
+Regex validate PIN code
+
+function validatePIN(pin) {
+  
+  if (!/^\d+$/.test(pin)) {
+    return false;
+  }
+  
+  return pin.length === 4 || pin.length === 6;
+}
+
+
 Returning Strings
 function greet(name) {
   return `Hello, ${name} how are you doing today?`;
