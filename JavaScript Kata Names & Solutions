@@ -1,4 +1,21 @@
 
+The Supermarket Queue
+
+function queueTime(customers, n) {
+  if (customers.length === 0) return 0;
+  if (n === 1) return customers.reduce((sum, time) => sum + time, 0);
+
+  let tills = new Array(n).fill(0);
+
+  for (let customerTime of customers) {
+    let minTillIndex = tills.reduce((minIndex, tillTime, index, arr) => {
+      return tillTime < arr[minIndex] ? index : minIndex;
+    }, 0);
+    tills[minTillIndex] += customerTime;
+  }
+
+  return Math.max(...tills);
+}
 
 Regex validate PIN code
 
