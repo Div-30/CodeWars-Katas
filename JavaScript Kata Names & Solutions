@@ -382,5 +382,54 @@ const flip=(d, a)=>{
 }
 
 
+Sum Arrays
+
+function sum (numbers) {
+  let sumArray = 0;
+  for (let i = 0; i < numbers.length; i++){
+    sumArray += numbers[i];
+  }
+  return sumArray;
+}
+
+function sum(array) {
+  if (array.length === 0) {
+    return 0;
+  }
+
+  let sum = 0; // Declare and initialize sum outside the loop
+
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+
+  return sum;
+}
+
+
+Sum of two lowest positive integers
+
+function sumTwoSmallestNumbers(numbers) {  
+  //Code here
+  numbers.sort((a,b) => (a-b));
+  return numbers[0] + numbers[1];
+  
+}
+
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+
+Convert boolean values to strings 'Yes' or 'No'.
+
+function boolToWord( bool ){
+  //...
+  if (bool) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+}
+
+
 
 
