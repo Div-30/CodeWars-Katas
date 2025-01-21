@@ -1,4 +1,25 @@
 
+
+Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
+
+function isAgeDiverse(list) {
+  // Create flags for each age group
+  const teens = list.some(dev => dev.age >= 10 && dev.age < 20);
+  const twenties = list.some(dev => dev.age >= 20 && dev.age < 30);
+  const thirties = list.some(dev => dev.age >= 30 && dev.age < 40);
+  const forties = list.some(dev => dev.age >= 40 && dev.age < 50);
+  const fifties = list.some(dev => dev.age >= 50 && dev.age < 60);
+  const sixties = list.some(dev => dev.age >= 60 && dev.age < 70);
+  const seventies = list.some(dev => dev.age >= 70 && dev.age < 80);
+  const eighties = list.some(dev => dev.age >= 80 && dev.age < 90);
+  const nineties = list.some(dev => dev.age >= 90 && dev.age < 100);
+  const hundreds = list.some(dev => dev.age >= 100);
+
+  // Return true only if we have at least one developer in each age group
+  return teens && twenties && thirties && forties && fifties && 
+         sixties && seventies && eighties && nineties && hundreds;
+}
+
 The Supermarket Queue
 
 function queueTime(customers, n) {
