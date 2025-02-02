@@ -1,5 +1,14 @@
 
 
+
+Product Of Maximums Of Array (Array Series #2)
+function maxProduct(numbers, size){
+  //your code here
+  let numbers2 = numbers.sort((a,b) => b-a);
+  let numbers3 = numbers2.slice(0,size);
+  return numbers3.reduce((acc, curr) => acc * curr);
+}
+
 Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
 
 function isAgeDiverse(list) {
