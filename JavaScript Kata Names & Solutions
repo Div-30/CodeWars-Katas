@@ -1,6 +1,46 @@
 
 
 
+Fun with ES6 Classes #2 - Animals and Inheritance
+
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, "shark", status);  // Fixed values for legs and species
+    this.status = status;  // Only need to assign unique/modified properties
+  }
+  
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, "cat", status);  // Cats have 4 legs and are cats!
+    this.status = status;
+  }
+  
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, "dog", status);  // Dogs have 4 legs and are dogs!
+    this.master = master;  // Only need to assign unique properties
+    this.status = status;
+  }
+  
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+  
+  greetMaster() {
+    return `Hello ${this.master}`;  // Added basic greeting implementation
+  }
+}
+
 Fun with ES6 Classes #1 - People, people, people
 class Person {
   // Get coding in ES6 :D
