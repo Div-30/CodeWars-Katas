@@ -585,3 +585,12 @@ function doubleInteger(i) {
   // i will be an integer. Double it and return it.
   return i * 2;
 }
+
+Area or Perimeter
+const areaOrPerimeter = function(l , w) {
+  if (l === w) {
+    return l * w;
+  } else {
+    return (l + w) * 2;
+  }
+};
