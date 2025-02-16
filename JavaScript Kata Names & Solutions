@@ -594,3 +594,16 @@ const areaOrPerimeter = function(l , w) {
     return (l + w) * 2;
   }
 };
+
+Beginner Series #1 School Paperwork
+function paperwork(n, m) {
+  // variable that will store the product 
+  let blankPage = n * m;
+  // condition statement that returns 0 if one of the arguments is negative
+  if (n < 0 || m < 0) {
+    return 0;
+  } else {
+    return blankPage;
+  }
+  
+}
