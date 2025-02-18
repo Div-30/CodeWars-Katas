@@ -624,3 +624,11 @@ function sumMix(x){
   return arr;
 
 }
+
+Ones and Zeros
+const binaryArrayToNumber = arr => {
+  return arr.reduce((acc, bit, index) => {
+    const power = arr.length - 1 - index;
+    return acc + bit * Math.pow(2, power);
+  }, 0);
+};
