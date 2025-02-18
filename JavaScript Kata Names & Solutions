@@ -617,3 +617,10 @@ function validatePIN(pin) {
   
   return pin.length === 4 || pin.length === 6;
 }
+
+Sum Mixed Array
+function sumMix(x){
+  let arr = x.reduce((acc,curr) => acc + Number(curr), 0);
+  return arr;
+
+}
