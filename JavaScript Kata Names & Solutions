@@ -1,4 +1,8 @@
 
+
+export function multiply(a: number, b: number): number {
+  return a * b;
+}
 List Filtering
 export function filter_list(l:Array<any>):Array<number> {
   // Return a new array with the strings filtered out
