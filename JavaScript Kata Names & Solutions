@@ -1,13 +1,22 @@
 
+
+
+Square Every Digit
+function squareDigits(num){
+  return parseInt(num.toString().split('').map(digit => digit * digit).join(''));
+}
+
 Multiply
 export function multiply(a: number, b: number): number {
   return a * b;
 }
+
 List Filtering
 export function filter_list(l:Array<any>):Array<number> {
   // Return a new array with the strings filtered out
   return l.filter(el => typeof el === "number");
 }
+
 Fun with ES6 Classes #3 - Cuboids, Cubes and Getters
 
 class Cuboid {
